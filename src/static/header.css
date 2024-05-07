@@ -1,56 +1,111 @@
 /* header.css */
 header {
-    background-color: #fff; /* White background */
-    padding: 20px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* White background */
+  padding: 20px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+.signin-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.signin-button:hover {
+  color: #007bff;
+  background-color: #ffffff;
+}
+
+header .menu-button {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1024px) {
+  header .menu-button {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60%; /* Adjusted height to cover the entire viewport */
+    width: 100%; /* Adjusted width for better visibility */
     align-items: center;
-  }
-  
-  .logo {
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #007bff;
-  }
-  
-  .signin-button {
-    padding: 10px 20px;
+    justify-content: center;
+    gap: 1.5rem;
     background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: 1s;
+    transform: translateX(100%); /* Corrected typo in transform property */
   }
-  
-  .signin-button:hover {
-    background-color: #0056b3;
+
+  header nav ul{
+    flex-direction: column;
+    gap: 1.2rem;
   }
-  
+
+  header .responsive_nav {
+    transform: translateX(0); /* Adjusted transform property to show the menu */
+  }
+
+  nav .menu-cancel {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.6rem;
+  }
+}

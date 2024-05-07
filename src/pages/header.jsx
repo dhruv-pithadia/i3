@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { TfiMenu } from "react-icons/tfi";
+import { MdOutlineCancel } from "react-icons/md";
 import "../static/header.css"
-class Header extends Component {
-    render() {
+function Header() {
+        const navref = useRef();
+        const shownavbar = () => {
+            navref.current.classList.toggle("responsive_nav")
+        }
         return (
             <header>
                 <div className="logo">i3</div>
-                <nav>
+                <nav ref={navref}>
                     <ul>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/startups'>Startups</Link></li>
@@ -14,11 +19,17 @@ class Header extends Component {
                         <li><Link to='/about-us'>About-Us</Link></li>
                         <li><Link to='/contact-us'>Contact-Us</Link></li>
                         <li><Link to='/sign-in' className="signin-button">Sign In</Link></li>
+                        <button className='menu-button menu-cancel' onClick={shownavbar}>
+                            <MdOutlineCancel />
+                        </button>
                     </ul>
                 </nav>
+                <button className='menu-button'onClick={shownavbar}>
+                    <TfiMenu />
+                </button>
             </header>
         );
-    }
 }
 
 export default Header;
+
