@@ -21,10 +21,13 @@ nav ul {
   padding: 0;
   display: flex;
   align-items: center;
+  gap: 1.2rem;
+  font-weight: 800;
 }
 
 nav ul li {
   margin-right: 20px;
+  border: 1px solid transparent; /* Add border to each list item */
 }
 
 nav ul li:last-child {
@@ -36,10 +39,13 @@ nav ul li a {
   color: #333;
   font-size: 18px;
   transition: color 0.3s ease;
+  padding: 8px 16px; /* Add padding to anchor elements */
+  border-radius: 5px; /* Add border radius to anchor elements */
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  color: #ffffff;
+  background-color: #007bff; /* Change background color on hover */
 }
 
 .signin-button {
@@ -80,19 +86,31 @@ header .menu-button {
     position: fixed;
     top: 0;
     left: 0;
-    height: 60%; /* Adjusted height to cover the entire viewport */
+    height: 100%; /* Adjusted height to cover the entire viewport */
     width: 100%; /* Adjusted width for better visibility */
-    align-items: center;
+    align-items:center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: #007bff;
+    background-color: rgba(224, 230, 237, 0.8); /* Adjusted background color with reduced opacity */
+    backdrop-filter: blur(5px); /* Apply glass morphism effect */
     transition: 1s;
     transform: translateX(100%); /* Corrected typo in transform property */
   }
 
-  header nav ul{
+  header nav ul {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  nav ul li  {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    padding: 8px 16px; /* Add padding to anchor elements */
+    border-radius: 5px; /* Add border radius to anchor elements */
+    font-weight: 800;
   }
 
   header .responsive_nav {
