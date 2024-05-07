@@ -9,8 +9,7 @@ class Home extends Component {
             <div className="home-main">
                 <Header/>
                 <div className="home-sub-main">
-                    <img src={InvestInIdeas
-                    } alt="Description of the image" className="image" />                      <div className="slieshow">
+                    <img src={InvestInIdeas} alt="Description of the image" className="image" />                      <div className="slieshow">
 
                     </div>
                 </div>
