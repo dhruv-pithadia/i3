@@ -1,0 +1,20 @@
+/* home.css */
+
+.home-main {
+    width: 100%; /* Main div takes 100% width of the viewport */
+  }
+  
+  .home-sub-main {
+    width: 80%; /* Submain div takes 80% width of the viewport */
+    margin: 0 auto; /* Centers the submain div horizontally */
+    display: flex;
+    justify-content: center; /* Aligns its children (including the image) horizontally at the center */
+    align-items: center; /* Aligns its children (including the image) vertically at the center */
+    margin-top: 5%;
+  }
+  
+  .image {
+    max-width: 100%; /* Ensures the image adapts to the size of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+  }
+  
