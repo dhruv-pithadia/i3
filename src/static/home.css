@@ -1,20 +1,89 @@
 /* home.css */
 
 .home-main {
-    width: 100%; /* Main div takes 100% width of the viewport */
+  width: 100%;
+}
+
+.home-sub-main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 40%;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 60px; /* Add border radius */
+  z-index: 0;
+}
+
+.slideshow {
+  display: flex;
+  transition: transform 2s ease;
+  height: 100%;
+  width: 100%;
+  touch-action: pan-y; /* Allow vertical scrolling on mobile devices */
+  animation: slideAnimation 10s infinite alternate; /* Auto animation */
+}
+
+.slide {
+  flex: 1 0 auto;
+  min-width: 100%;
+  max-width: 100%; /* Ensure each image takes up the full width of the container */
+}
+
+/* Arrows for scrolling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .slideshow-container {
+      min-width: 300px;
+      border-radius: 30px;
+      max-height: 200px;
+      z-index: -1;
   }
-  
-  .home-sub-main {
-    width: 80%; /* Submain div takes 80% width of the viewport */
-    margin: 0 auto; /* Centers the submain div horizontally */
-    display: flex;
-    justify-content: center; /* Aligns its children (including the image) horizontally at the center */
-    align-items: center; /* Aligns its children (including the image) vertically at the center */
-    margin-top: 5%;
-  }
-  
-  .image {
-    max-width: 100%; /* Ensures the image adapts to the size of its container */
-    height: auto; /* Maintains the aspect ratio of the image */
-  }
-  
+}
