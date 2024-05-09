@@ -147,6 +147,11 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px; /* Add border radius */
+  transition: transform 0.3s ease; /* Add transition for smoother effect */
+}
+
+.image:hover {
+  transform: scale(1.05); /* Increase size on hover */
 }
 
 @keyframes slideAnimation {

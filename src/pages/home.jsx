@@ -61,8 +61,8 @@ class Home extends Component {
                                 <img src={section1} class="image"/>
                             </div>
                             <div class="text-container">
-                                <h2>Title 1</h2>
-                                <p>Text for Image 1 goes here...</p>
+                                <h2>Invest in the Most Promising Startups</h2>
+                                <p>Text for Image 2 goes here...</p>
                             </div>
                         </div>
                         <div class="item">
