@@ -14,7 +14,7 @@ header {
   color: #333;
 }
 
-nav ul {
+.header-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,19 +22,18 @@ nav ul {
   align-items: center;
   gap: 1.2rem;
   font-weight: 800;
-  
 }
 
-nav ul li {
+.header-nav ul li {
   margin-right: 20px;
   border: 1px solid transparent; /* Add border to each list item */
 }
 
-nav ul li:last-child {
+.header-nav ul li:last-child {
   margin-right: 0;
 }
 
-nav ul li a {
+.header-nav ul li a {
   padding: 1.3em 2em;
   font-size: 12px;
   text-transform: uppercase;
@@ -51,11 +50,11 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:hover {
+.header-nav ul li a:hover {
   background-color: #007bff;
-box-shadow: 0px 15px 20px rgba(46, 89, 229, 0.4);
-color: #fff;
-transform: translateY(-7px);
+  box-shadow: 0px 15px 20px rgba(46, 89, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
 .signin-button {
@@ -90,7 +89,7 @@ header .menu-button {
     opacity: 1;
   }
 
-  header nav {
+  header .header-nav {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -98,7 +97,7 @@ header .menu-button {
     left: 0;
     height: 100%; /* Adjusted height to cover the entire viewport */
     width: 100%; /* Adjusted width for better visibility */
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 1.5rem;
     background-color: rgba(224, 230, 237, 0.8); /* Adjusted background color with reduced opacity */
@@ -108,13 +107,13 @@ header .menu-button {
     z-index: 1;
   }
 
-  header nav ul {
+  header .header-nav ul {
     flex-direction: column;
     gap: 1.5rem;
     padding-bottom: 1.5rem;
   }
 
-  nav ul li  {
+  .header-nav ul li  {
     text-decoration: none;
     color: #333;
     font-size: 18px;
@@ -128,13 +127,13 @@ header .menu-button {
     transform: translateX(0); /* Adjusted transform property to show the menu */
   }
 
-  nav .menu-cancel {
+  .header-nav .menu-cancel {
     position: absolute;
     top: 2rem;
     right: 2rem;
   }
 
-  nav a {
+  .header-nav a {
     font-size: 1.6rem;
   }
 }

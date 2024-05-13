@@ -1,0 +1,82 @@
+.main-footer{
+    max-width: 100%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-main-footer{
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-weight: 800;
+  }
+  
+  .footer-nav ul li {
+    margin-right: 20px;
+    border: 1px solid transparent; /* Add border to each list item */
+  }
+  
+  .footer-nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-nav ul li a {
+    padding: 1.3em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  .footer-nav ul li a:hover {
+    transform: scale(2);
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 5%;
+    list-style: none;
+}
+
+.social-media a {
+    margin-left: 15px; /* Adjust the gap between icons as needed */
+    color: black; /* Set the icon color to black */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.social-media a:first-child {
+    margin-left: 0; /* Remove left margin from the first icon */
+}
+
+.social-media a:hover {
+    transform: scale(1.2); /* Add hover effect to scale the icon */
+}
+
+.rights-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: small;
+    color: #00000061;
+}

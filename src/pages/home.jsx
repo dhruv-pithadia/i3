@@ -8,6 +8,7 @@ import s3 from "../components/s3.jpg";
 import s4 from "../components/s4.jpg";
 import section1 from "../components/section-home-1.png";
 import section2 from "../components/section-home-2.png";
+import Footer from './footer';
 
 class Home extends Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class Home extends Component {
             <div className="home-main">
                 <Header/>
                 <div className="home-sub-main">
-                    <img src={InvestInIdeas}  className="image" />
+                    <img src={InvestInIdeas}  className="image" alt='' />
                     <div className="slideshow-container">
                         <div className="slideshow" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                             {images.map((image, index) => (
@@ -58,7 +59,7 @@ class Home extends Component {
                     <div class="section">
                         <div class="item">
                             <div class="image-container">
-                                <img src={section1} class="image"/>
+                                <img src={section1} class="image" alt=''/>
                             </div>
                             <div class="text-container">
                                 <h2>Invest in the Most Promising Startups</h2>
@@ -71,11 +72,12 @@ class Home extends Component {
                                 <p>Text for Image 2 goes here...</p>
                             </div>
                             <div class="image-container">
-                                <img src={section2} class="image"/>
+                                <img src={section2} class="image" alt=''/>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }
