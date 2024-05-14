@@ -62,11 +62,10 @@ class Home extends Component {
                                 <img src={section1} class="image" alt=''/>
                             </div>
                             <div class="text-container">
-                                <h2>Invest in the Most Promising Startups</h2>
-                                <p>Text for Image 2 goes here...</p>
+                                <p>Invest in the Most Promising Startups</p>
                             </div>
                         </div>
-                        <div class="item">
+                        {/* <div class="item">
                             <div class="text-container">
                                 <h2>Title 2</h2>
                                 <p>Text for Image 2 goes here...</p>
@@ -74,7 +73,7 @@ class Home extends Component {
                             <div class="image-container">
                                 <img src={section2} class="image" alt=''/>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <Footer/>

@@ -87,6 +87,7 @@ header .menu-button {
   header .menu-button {
     visibility: visible;
     opacity: 1;
+    overflow-x: hidden;
   }
 
   header .header-nav {

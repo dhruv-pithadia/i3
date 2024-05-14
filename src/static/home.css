@@ -141,6 +141,8 @@
 .text-container {
   flex: 0 0 50%; /* Half the width for text */
   padding-left: 20px; /* Add space between image and text */
+  font-size: xx-large;
+  font-weight: 800;
 }
 
 .image {
@@ -168,8 +170,12 @@
       border-radius: 30px;
       max-height: 200px;
   }
+
+  .home-main{
+    max-width: fit-content;
+  }
   .home-sub-main {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 80%; /* Adjust width for smaller screens */
   }
   
   .button-home {
@@ -183,6 +189,14 @@
   
   .section {
     margin-left: 0; /* Remove left margin */
+  }
+
+  .image-container{
+    margin-top: 8%;
+  }
+
+  .text-container{
+    font-size: larger;
   }
 
   .item {
