@@ -7,16 +7,25 @@ import s2 from "../components/s2.jpg";
 import s3 from "../components/s3.jpg";
 import s4 from "../components/s4.jpg";
 import section1 from "../components/section-home-1.png";
-import section2 from "../components/section-home-2.png";
 import Footer from './footer';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentIndex: 1,
-            images: [s1, s2, s3, s4]
+            currentIndex: 0,
+            images: [s1, s2, s3, s4],
+            intervalId: null
         };
+    }
+
+    componentDidMount() {
+        let intervalId = setInterval(this.nextSlide, 5000); // Change image every 5000 milliseconds (5 seconds)
+        this.setState({ intervalId });
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.state.intervalId);
     }
 
     nextSlide = () => {
@@ -35,11 +44,11 @@ class Home extends Component {
         const { currentIndex, images } = this.state;
         return (
             <div className="home-main">
-                <Header/>
+                <Header />
                 <div className="home-sub-main">
-                    <img src={InvestInIdeas}  className="image" alt='' />
-                    <div className="slideshow-container">
-                        <div className="slideshow" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                    <img src={InvestInIdeas} className="image" alt='' />
+                    <div className="carousel-container">
+                        <div className="carousel-slide" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                             {images.map((image, index) => (
                                 <img
                                     key={index}
@@ -49,34 +58,25 @@ class Home extends Component {
                                 />
                             ))}
                         </div>
-                        {/* <div className="arrow left-arrow" onClick={this.prevSlide}>{"<"}</div>
-                        <div className="arrow right-arrow" onClick={this.nextSlide}>{">"}</div> */}
+                        <div className="carousel-arrow left-arrow" onClick={this.prevSlide}>&#10094;</div>
+                        <div className="carousel-arrow right-arrow" onClick={this.nextSlide}>&#10095;</div>
                     </div>
                     <div className="button-home">
                         <button className='btn-startup'>Register as Startup</button>
                         <button className='btn-investor'>Register as Investor</button>
                     </div>
-                    <div class="section">
-                        <div class="item">
-                            <div class="image-container">
-                                <img src={section1} class="image" alt=''/>
+                    <div className="section">
+                        <div className="item">
+                            <div className="image-container">
+                                <img src={section1} className="image" alt=''/>
                             </div>
-                            <div class="text-container">
+                            <div className="text-container">
                                 <p>Invest in the Most Promising Startups</p>
                             </div>
                         </div>
-                        {/* <div class="item">
-                            <div class="text-container">
-                                <h2>Title 2</h2>
-                                <p>Text for Image 2 goes here...</p>
-                            </div>
-                            <div class="image-container">
-                                <img src={section2} class="image" alt=''/>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }

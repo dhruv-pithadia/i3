@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header';
+import Footer from './footer';
 
 class Investors extends Component {
     render() {
@@ -9,6 +10,7 @@ class Investors extends Component {
                 <div className="investor-sub-main">
 
                 </div>
+                <Footer/>
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header';
+import Footer from './footer';
 
 class ContactUs extends Component {
     render() {
@@ -9,6 +10,7 @@ class ContactUs extends Component {
                 <div className="contact-sub-main">
 
                 </div>
+                <Footer/>
             </div>
         );
     }

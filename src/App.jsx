@@ -25,6 +25,7 @@ class App extends Component {
            <Route path="/faq" element={<Faq/>}></Route>
            <Route path="/tos" element={<Tos/>}></Route>
            <Route path="/provacypolicy" element={<Privacypolicy/>}></Route>
+
         </Routes>
       </BrowserRouter>
     );
