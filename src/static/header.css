@@ -138,6 +138,10 @@ header .menu-button {
     font-weight: 800;
   }
 
+  .header-nav ul li a {
+    border-radius: 45px !important;
+  }
+
   header .responsive_nav {
     transform: translateX(0);
     /* Adjusted transform property to show the menu */

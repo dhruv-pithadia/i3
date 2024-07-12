@@ -11,6 +11,8 @@ import DedicatedCardImg from "../components/section-home-2.png"
 import Footer from './footer';
 import { Accordion, AccordionBody, Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
+import support from "../components/support.png";
 
 
 
@@ -63,7 +65,7 @@ const Home = () => {
                         <div className="carousel-arrow right-arrow" onClick={nextSlide}>&#10095;</div>
                     </div> */}
                     <div className="banner-home">
-                        <div className="banner-sub-home">
+                        <div className="banner-sub-home text-center">
                             <p>Invest In Ideas</p>
                         </div>
                         <div className="button-home">
@@ -72,25 +74,26 @@ const Home = () => {
                         </div>
                     </div>
 
-
-                    <section className='Intro-Text-With-Img'>
-                        <div className="intro-text-img">
-                            <div className="intro-text">
-                                <h5>Who We Are</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptas
-                                    rem accusamus quam porro doloremque rerum minus magnam nihil incidunt odit in nam
-                                    recusandae commodi nemo, quasi quas aliquam voluptatibus cumque! Vero quo alias in!
-                                    Officiis minus veritatis aliquid magni consectetur? Odio recusandae id repellendus
-                                    facilis atque alias voluptatum explicabo?doloremque rerum minus magnam nihil incidunt odit in nam
-                                    recusandae commodi nemo, quasi quas aliquam voluptatibus cumque! Vero quo alias in!
-                                    Officiis minus veritatis aliquid magni consectetur? Odio recusandae id repellendus
-                                    facilis atque alias voluptatum explicabo?</p>
-                            </div>
-                            <div className="intro-img">
+                    <Container fluid="md">
+                        <Row className='intro-para-row d-flex mt-5'>
+                            <Col>
+                                <div className="intro-text">
+                                    <h5>Who We Are</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptas
+                                        rem accusamus quam porro doloremque rerum minus magnam nihil incidunt odit in nam
+                                        recusandae commodi nemo, quasi quas aliquam voluptatibus cumque! Vero quo alias in!
+                                        Officiis minus veritatis aliquid magni consectetur? Odio recusandae id repellendus
+                                        facilis atque alias voluptatum explicabo?doloremque rerum minus magnam nihil incidunt odit in nam
+                                        recusandae commodi nemo, quasi quas aliquam voluptatibus cumque! Vero quo alias in!
+                                        Officiis minus veritatis aliquid magni consectetur? Odio recusandae id repellendus
+                                        facilis atque alias voluptatum explicabo?</p>
+                                </div>
+                            </Col>
+                            <Col><div className="intro-img">
                                 <img src={introImg} alt="" />
-                            </div>
-                        </div>
-                    </section>
+                            </div></Col>
+                        </Row>
+                    </Container>
 
                     <Container>
                         <Row className='mt-5'>
@@ -134,6 +137,51 @@ const Home = () => {
 
 
                         </Row>
+                    </Container>
+
+                    <Container fluid="md mt-5" className='assistance-cards'>
+                        <Row>
+                            <h2 className='text-center'>Assistance & Support</h2>
+                        </Row>
+                        <Col className='d-flex justify-content-evenly mt-4'>
+
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={support} className='p-2' />
+                                <Card.Body>
+                                    <Card.Title>Immediate Transport</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                    {/* <Button variant="primary">Go somewhere</Button> */}
+                                </Card.Body>
+                            </Card>
+
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={support} className='p-2' />
+                                <Card.Body>
+                                    <Card.Title>Call Support</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                    {/* <Button variant="primary">Go somewhere</Button> */}
+                                </Card.Body>
+                            </Card>
+
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={support} className='p-2' />
+                                <Card.Body>
+                                    <Card.Title>24/7 Support</Card.Title>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                    {/* <Button variant="primary">Go somewhere</Button> */}
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
                     </Container>
 
 
