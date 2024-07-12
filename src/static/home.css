@@ -420,10 +420,12 @@
 
   .banner-home {
     max-width: 100%;
+    max-height: 60vh;
   }
 
   .banner-home p {
-    font-size: 50px;
+    font-size: 100px;
+    padding: 10px;
   }
 
   .banner-sub-home p {

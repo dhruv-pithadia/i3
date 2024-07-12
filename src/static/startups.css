@@ -33,3 +33,9 @@
         /* Top-right shadow */
         30px -30px 10px rgba(0, 0, 0, 0.525);
 }
+
+@media (max-width: 768px) {
+    .startups .banner .banner-text h1 {
+        font-size: 70px;
+    }
+}
