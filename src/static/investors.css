@@ -1,9 +1,9 @@
-.startup-main {
+.investor-main {
     font-family: "Playfair Display", serif;
     overflow: hidden;
 }
 
-.startups .banner {
+.investors .banner {
     position: relative;
     width: 100%;
     height: 60vh;
@@ -11,7 +11,7 @@
     background-size: cover;
 }
 
-.startups .banner::before {
+.investors .banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -22,7 +22,7 @@
     z-index: 1;
 }
 
-.startups .banner .banner-text h1 {
+.investors .banner .banner-text h1 {
     font-size: 150px;
     font-weight: 900;
     color: #fff;
@@ -34,20 +34,20 @@
         30px -30px 10px rgba(0, 0, 0, 0.525);
 }
 
-.intro-startup {
+.intro-investor {
     position: relative;
     overflow: visible !important;
     margin-bottom: 5rem;
 }
 
-.intro-startup h2,
+.intro-investor h2,
 .features h2,
 .testimonials h2 {
     font-size: 40px;
     font-weight: 700;
 }
 
-.intro-startup p {
+.intro-investor p {
     font-size: 24px;
 
 }
@@ -98,13 +98,8 @@
     border: 1px solid #0D2A56;
 }
 
-
 @media (max-width: 768px) {
-    .startups .banner {
-        height: 40vh;
-    }
-
-    .startups .banner .banner-text h1 {
+    .investors .banner .banner-text h1 {
         font-size: 70px;
     }
 
@@ -115,15 +110,4 @@
     .testimonials .card {
         margin-bottom: 1rem;
     }
-
-    .intro-startup {
-        margin-bottom: 3rem;
-    }
-
-    .wave-container {
-        position: absolute;
-        transform: translateY(150px);
-        height: 150px;
-    }
-
 }
