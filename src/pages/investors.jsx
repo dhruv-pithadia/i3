@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './header';
 import Footer from './footer';
-import { Container, Row, Col, FormControl, Card } from 'react-bootstrap';
+import { Container, Row, Col, FormControl, Card, Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,6 +9,7 @@ import "../static/investors.css";
 
 const Investors = () => {
     const [formVisible, setFormVisible] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleReset = () => {
         document.getElementById("investorForm").reset();
@@ -16,6 +17,27 @@ const Investors = () => {
 
     const handleSignUpClick = () => {
         setFormVisible(true);
+    };
+
+    const validateForm = () => {
+        const form = document.getElementById('investorForm');
+        const isValid = Array.from(form.elements).every(input =>
+            input.type === 'submit' || input.value.trim() !== ''
+        );
+        document.getElementById('submitBtn').disabled = !isValid;
+    };
+
+    const handleChange = () => {
+        validateForm();
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setShowPopup(true);
+        setTimeout(() => {
+            setShowPopup(false);
+            window.location.reload();
+        }, 1000); // Adjust timing as needed
     };
 
     return (
@@ -226,10 +248,40 @@ const Investors = () => {
                                         <Form.Control required />
                                     </Form.Group>
                                 </Row>
-                                <Form.Group className="mb-3" id="formGridCheckbox">
-                                    <Form.Check type="checkbox" label="Check me out" />
+
+                                {/* Identity Verification */}
+                                <Form.Group className="mb-3" controlId="formGridAadhar">
+                                    <Form.Label>Aadhar Card</Form.Label>
+                                    <Form.Control type="file" required />
                                 </Form.Group>
-                                <Button variant="primary" type="submit">
+                                <Form.Group className="mb-3" controlId="formGridPAN">
+                                    <Form.Label>PAN Card</Form.Label>
+                                    <Form.Control type="file" required />
+                                </Form.Group>
+
+                                {/* Proof of Address */}
+                                <Form.Group className="mb-3" controlId="formGridAddressProof">
+                                    <Form.Label>Proof of Address</Form.Label>
+                                    <Form.Control type="file" required />
+                                </Form.Group>
+
+                                {/* Proof of Funds */}
+                                <Form.Group className="mb-3" controlId="formGridFundsProof">
+                                    <Form.Label>Proof of Funds</Form.Label>
+                                    <Form.Control type="file" required />
+                                </Form.Group>
+
+                                {/* Accredited Investor Verification */}
+                                <Form.Group className="mb-3" controlId="formGridAccredited">
+                                    <Form.Label>Accredited Investor Verification</Form.Label>
+                                    <Form.Control type="file" required />
+                                </Form.Group>
+
+                                <Form.Group className="mb-3" id="formGridCheckbox">
+                                    <Form.Check type="checkbox" label="Check me out" onClick={handleChange} required />
+                                </Form.Group>
+
+                                <Button id="submitBtn" variant="primary" type="submit" disabled>
                                     Submit
                                 </Button>
                                 <Button variant="secondary" className="m-3" onClick={handleReset}>
@@ -241,6 +293,21 @@ const Investors = () => {
                 )}
             </div>
             <Footer />
+
+            {/* Popup Modal */}
+            <Modal show={showPopup} onHide={() => setShowPopup(false)} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Thank You!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>We will get back to you soon!</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowPopup(false)}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 }

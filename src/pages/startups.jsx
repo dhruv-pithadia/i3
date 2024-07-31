@@ -232,6 +232,35 @@ const Startups = () => {
                                     <Form.Group className="mb-3" id="formGridCheckbox">
                                         <Form.Check type="checkbox" label="Check me out" />
                                     </Form.Group>
+
+                                    <Form.Group className="mb-3" controlId="formGridLegalDocs">
+
+
+                                        {/* Certificate of Incorporation */}
+                                        <Form.Label className='font-weight: bold'>Certificate of Incorporation</Form.Label>
+                                        <Form.Control type="file" required />
+
+                                        {/* Founder's Agreement */}
+                                        <Form.Label>Founder's Agreement</Form.Label>
+                                        <Form.Control type="file" required />
+
+                                        {/* Non-Disclosure Agreement (NDA) */}
+                                        <Form.Label>Non-Disclosure Agreement (NDA)</Form.Label>
+                                        <Form.Control type="file" required />
+
+                                        {/* Business Plan */}
+                                        <Form.Label>Business Plan</Form.Label>
+                                        <Form.Control type="file" required />
+
+                                        {/* Pitch Deck */}
+                                        <Form.Label>Pitch Deck (PPT)</Form.Label>
+                                        <Form.Control type="file" required />
+                                    </Form.Group>
+
+
+
+
+
                                     <Button variant="primary" type="submit">
                                         Submit
                                     </Button>
