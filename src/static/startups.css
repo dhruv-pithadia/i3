@@ -1,5 +1,5 @@
 .startup-main {
-    font-family: "Playfair Display", serif;
+    font-family: "Poppins", serif;
     overflow: hidden;
 }
 
@@ -9,6 +9,7 @@
     height: 60vh;
     background: url(../components/startups.png);
     background-size: cover;
+    top: 70px
 }
 
 .startups .banner::before {
@@ -38,6 +39,10 @@
     position: relative;
     overflow: visible !important;
     margin-bottom: 5rem;
+}
+
+.intro-startup h2 {
+    margin-top: 6rem;
 }
 
 .intro-startup h2,

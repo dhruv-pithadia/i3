@@ -1,5 +1,5 @@
 .investor-main {
-    font-family: "Playfair Display", serif;
+    font-family: "Poppins", serif;
     overflow: hidden;
 }
 
@@ -9,6 +9,7 @@
     height: 60vh;
     background: url(../components/startups.png);
     background-size: cover;
+    top: 70px;
 }
 
 .investors .banner::before {
@@ -18,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #0D2A56, #0d2a5614);
+    background: linear-gradient(to bottom, #0D2A56, #0b275014);
     z-index: 1;
 }
 
@@ -38,6 +39,11 @@
     position: relative;
     overflow: visible !important;
     margin-bottom: 5rem;
+
+}
+
+.intro-investor h2 {
+    margin-top: 6rem;
 }
 
 .intro-investor h2,

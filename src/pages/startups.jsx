@@ -24,7 +24,7 @@ const Startups = () => {
                 <Header />
                 <div className="startup-sub-main">
 
-                    <Row className='startups text-center'>
+                    <Row className='startups first-section text-center'>
                         <Col>
                             <div className="banner d-flex justify-content-center align-items-center">
                                 <div className="banner-text">

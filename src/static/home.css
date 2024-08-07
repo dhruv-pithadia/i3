@@ -3,7 +3,7 @@
 .home-main {
   width: 100%;
   background-image: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", serif;
 }
 
 .home-sub-main {
@@ -60,7 +60,6 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 } */
-
 .btn-startup:hover,
 .btn-investor:hover {
   background: #ffffff;
@@ -317,9 +316,15 @@
   padding-top: 100px;
 }
 
+.intro-para-row {
+  position: relative;
+}
+
 .intro-img img {
   max-height: 100%;
   max-width: 100%;
+  position: absolute;
+  right: 0;
 }
 
 .intro-text h5 {
@@ -328,7 +333,8 @@
 }
 
 .intro-text p {
-  font-size: 24px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 /* Dedicated cards */
@@ -378,8 +384,7 @@
 }
 
 .card-dedicated img {
-  max-width: 70px;
-  max-width: 70px;
+  min-width: 70px;
   padding-bottom: 10px;
 }
 
@@ -435,11 +440,23 @@
       /* 20px -20px 0 white, */
       /* Top-right shadow */
       14px -10px 10px rgba(255, 255, 255, 0.525);
+
+    font-size: 3rem;
+  }
+
+  .intro-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-img img {
+    position: relative;
+    margin-bottom: 3rem;
   }
 
 
   .intro-para-row {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .assistance-cards .col {
@@ -457,7 +474,7 @@
 }
 
 .assistance-cards .card:hover {
-  transform: translateY(-10px);
-  background: #0D2A56;
+  transform: scale(1.1);
+  background: #0d2a56c8;
   color: #fff;
 }

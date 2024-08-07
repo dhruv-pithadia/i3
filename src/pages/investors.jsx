@@ -44,7 +44,7 @@ const Investors = () => {
         <div className="investor-main">
             <Header />
             <div className="investor-sub-main">
-                <Row className='investors text-center'>
+                <Row className='investors first-section text-center'>
                     <Col>
                         <div className="banner d-flex justify-content-center align-items-center">
                             <div className="banner-text">
