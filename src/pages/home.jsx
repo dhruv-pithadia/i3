@@ -16,6 +16,10 @@ import support from "../components/support.png";
 import who from "../components/who.svg"
 import people from "../components/people.svg"
 import shield from "../components/shield-check.svg"
+import quality from "../components/bookmark-star.svg"
+import scale from "../components/graph-up.svg"
+import customer from "../components/headset.svg"
+import algo from "../components/braces.svg"
 
 
 
@@ -96,7 +100,7 @@ const Home = () => {
                     </Container>
 
                     <Container>
-                        <Row className='mt-5'>
+                        <Row className='mt-5 mb-5'>
                             <Col>
                                 <div className="dedicated-heading">
                                     <h5>Dedicated to You</h5>
@@ -105,34 +109,34 @@ const Home = () => {
                             <div className="dedicated">
                                 <div className="card-dedicated">
                                     <img src={people} alt="" />
-                                    <h5>User Experience</h5>
-                                    <p>We prioritize creating a seamless and intuitive experience for both startups and investors.
+                                    <h3>User Experience</h3>
+                                    <p>Creating a seamless and intuitive experience for both startups and investors.
 
                                     </p>
                                 </div>
                                 <div className="card-dedicated">
                                     <img src={shield} alt="" />
-                                    <h5>Security and Privacy</h5>
+                                    <h3>Security and Privacy</h3>
                                     <p>Protecting your data and transactions is our top priority.</p>
                                 </div>
                                 <div className="card-dedicated">
-                                    <img src={DedicatedCardImg} alt="" />
-                                    <h5>Quality Control and Verification</h5>
+                                    <img src={quality} alt="" />
+                                    <h3>Quality Control and Verification</h3>
                                     <p>We are dedicated to maintaining a high standard of integrity and credibility.</p>
                                 </div>
                                 <div className="card-dedicated">
-                                    <img src={DedicatedCardImg} alt="" />
-                                    <h5>Scalability and Performance</h5>
+                                    <img src={scale} alt="" />
+                                    <h3>Scalability and Performance</h3>
                                     <p>As we grow, our platform is built to scale seamlessly.</p>
                                 </div>
                                 <div className="card-dedicated">
-                                    <img src={DedicatedCardImg} alt="" />
-                                    <h5>Customer Support and Engagement</h5>
+                                    <img src={customer} alt="" />
+                                    <h3>Customer Support & Engagement</h3>
                                     <p>Exceptional customer support is at the heart of what we do. </p>
                                 </div>
                                 <div className="card-dedicated">
-                                    <img src={DedicatedCardImg} alt="" />
-                                    <h5>Matching and Filtering Algorithms:</h5>
+                                    <img src={algo} alt="" />
+                                    <h3>Matching and Filtering Algorithms:</h3>
                                     <p>Our advanced algorithms are designed to connect startups with the right investors.</p>
                                 </div>
                             </div>
