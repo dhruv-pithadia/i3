@@ -237,7 +237,7 @@ const Startups = () => {
 
 
                                         {/* Certificate of Incorporation */}
-                                        <Form.Label className='font-weight: bold'>Certificate of Incorporation</Form.Label>
+                                        <Form.Label className=''>Certificate of Incorporation</Form.Label>
                                         <Form.Control type="file" required />
 
                                         {/* Founder's Agreement */}
