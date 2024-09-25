@@ -261,12 +261,10 @@ const Startups = () => {
 
 
 
-                                    <Button variant="primary" type="submit">
-                                        Submit
-                                    </Button>
-                                    <Button variant="secondary" className="m-3" onClick={handleReset}>
-                                        Reset
-                                    </Button>
+                                    <div className="form-buttons">
+                                        <Button variant="primary" type="submit">Submit</Button>
+                                        <Button variant="secondary" type="reset" onClick={handleReset}>Reset</Button>
+                                    </div>
                                 </Form>
                             </Row>
                         </Container>

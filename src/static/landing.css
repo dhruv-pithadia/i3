@@ -1,0 +1,117 @@
+/* Main Page Layout */
+.landing-main {
+    background: linear-gradient(135deg, #0D2A56, #102f6b);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-heading {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
+.hero-subtext {
+    font-size: 20px;
+    margin-bottom: 60px;
+    color: #d4d4d4;
+}
+
+/* Card Layout */
+.landing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.landing-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+}
+
+.landing-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.landing-card p {
+    font-size: 16px;
+    color: #d4d4d4;
+    margin-bottom: 30px;
+}
+
+/* Card Hover Effect */
+.landing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Call-to-action Button */
+.cta-button {
+    background-color: #1DBF73;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #17a15d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #0B1E3B;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .landing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-heading {
+        font-size: 36px;
+    }
+
+    .hero-subtext {
+        font-size: 18px;
+    }
+}

@@ -10,6 +10,7 @@ import SignIn from './pages/sign-in';
 import Faq from './footer/faq';
 import Tos from './footer/tos';
 import Privacypolicy from './footer/privacypolicy';
+import Landing from './pages/landing';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -17,7 +18,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Landing />}></Route>
+          <Route path="/home" element={<Home />}></Route>
           <Route path="/startups" element={<Startups />}></Route>
           <Route path="/investors" element={<Investors />}></Route>
           <Route path="/about-us" element={<AboutUs />}></Route>

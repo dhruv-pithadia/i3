@@ -104,6 +104,133 @@
     border: 1px solid #0D2A56;
 }
 
+/* Form Container Styling */
+form {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+/* Input and Select Fields Styling */
+form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form .form-control:focus {
+    border-color: #0D2A56;
+    box-shadow: 0 0 5px rgba(13, 42, 86, 0.2);
+    outline: none;
+}
+
+/* Label Styling */
+form label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* File Input Styling */
+form input[type="file"] {
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+form input[type="file"]:focus {
+    border-color: #0D2A56;
+    outline: none;
+    box-shadow: 0 0 5px rgba(13, 42, 86, 0.2);
+}
+
+/* Checkbox Styling */
+.form-check-input {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-check-input:checked {
+    background-color: #0D2A56;
+    border-color: #0D2A56;
+}
+
+/* Button Container for Alignment */
+.form-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    /* Adds spacing between buttons */
+    margin-top: 20px;
+}
+
+/* Button Styling */
+button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    background-color: #0D2A56;
+    color: white;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #004c8c;
+}
+
+/* Reset Button Styling */
+button[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+/* Adjusting Form Group Spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    form .form-control,
+    form button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .investors .banner .banner-text h1 {
         font-size: 70px;

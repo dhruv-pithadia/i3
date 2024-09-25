@@ -281,12 +281,10 @@ const Investors = () => {
                                     <Form.Check type="checkbox" label="Check me out" onClick={handleChange} required />
                                 </Form.Group>
 
-                                <Button id="submitBtn" variant="primary" type="submit" disabled>
-                                    Submit
-                                </Button>
-                                <Button variant="secondary" className="m-3" onClick={handleReset}>
-                                    Reset
-                                </Button>
+                                <div className="form-buttons">
+                                    <Button variant="primary" type="submit">Submit</Button>
+                                    <Button variant="secondary" type="reset" onClick={handleReset}>Reset</Button>
+                                </div>
                             </Form>
                         </Row>
                     </Container>
